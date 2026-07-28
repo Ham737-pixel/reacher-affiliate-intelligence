@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reacher Affiliate Intelligence"
+  short_description: "Build and extend Reacher affiliate dashboards"
+  default_prompt: "Use $reacher-affiliate-intelligence to build or customize a secure Reacher affiliate dashboard from the Data API."

@@ -1,0 +1,258 @@
+.account-button {
+  height: 32px;
+  white-space: nowrap;
+}
+
+.account-button[hidden] {
+  display: none;
+}
+
+.self-serve-dummy {
+  display: none !important;
+}
+
+.setup-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.setup-dialog[hidden] {
+  display: none;
+}
+
+.setup-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: oklch(0.08 0.003 240 / 0.78);
+  cursor: default;
+  backdrop-filter: blur(7px);
+}
+
+.setup-card {
+  position: relative;
+  width: min(460px, calc(100vw - 32px));
+  overflow: hidden;
+  border: 1px solid var(--mo-border);
+  border-radius: var(--mo-radius-lg);
+  background: var(--mo-surface-1);
+  box-shadow: var(--mo-shadow-drawer);
+}
+
+.setup-header {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 28px;
+  gap: 12px;
+  align-items: start;
+  padding: 18px;
+  border-bottom: 1px solid var(--mo-border-soft);
+}
+
+.setup-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--mo-radius-sm);
+  background: color-mix(in oklch, var(--health-blue) 12%, var(--mo-surface-2));
+  color: var(--health-blue);
+}
+
+.setup-icon .mo-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.setup-header h2 {
+  margin: 0;
+  color: var(--mo-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.setup-header p {
+  margin: 3px 0 0;
+  color: var(--mo-muted);
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.setup-close {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--mo-radius-sm);
+  background: transparent;
+  color: var(--mo-muted);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.setup-close:hover {
+  background: var(--mo-surface-2);
+  color: var(--mo-text);
+}
+
+.setup-body {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.setup-field {
+  display: grid;
+  gap: 6px;
+}
+
+.setup-field label {
+  color: var(--mo-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.setup-field input,
+.setup-field select {
+  width: 100%;
+  height: 38px;
+  border: 1px solid var(--mo-border);
+  border-radius: var(--mo-radius-sm);
+  outline: 0;
+  background: var(--mo-surface-2);
+  color: var(--mo-text);
+  padding: 0 11px;
+  font: inherit;
+  font-size: 13px;
+}
+
+.setup-field input:focus,
+.setup-field select:focus {
+  border-color: var(--health-blue);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--health-blue) 16%, transparent);
+}
+
+.setup-help,
+.setup-trust {
+  margin: 0;
+  color: var(--mo-muted);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.setup-help a {
+  color: var(--health-blue);
+}
+
+.setup-trust {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  padding: 10px;
+  border: 1px solid var(--mo-border-soft);
+  border-radius: var(--mo-radius-sm);
+  background: var(--mo-surface-2);
+}
+
+.setup-trust .mo-icon {
+  width: 15px;
+  height: 15px;
+  margin-top: 1px;
+  color: var(--health-good);
+}
+
+.setup-error {
+  margin: 0;
+  border: 1px solid color-mix(in oklch, var(--health-risk) 35%, var(--mo-border));
+  border-radius: var(--mo-radius-sm);
+  background: color-mix(in oklch, var(--health-risk) 8%, var(--mo-surface-1));
+  color: var(--health-risk);
+  padding: 9px 10px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.setup-card > .setup-error {
+  margin: 0 18px 18px;
+}
+
+.setup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.setup-actions .mo-button {
+  min-width: 112px;
+}
+
+.setup-progress {
+  display: grid;
+  gap: 10px;
+}
+
+.setup-progress__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.setup-progress__row strong {
+  color: var(--mo-text);
+  font-size: 12px;
+}
+
+.setup-progress__row span {
+  color: var(--mo-muted);
+  font-size: 11px;
+}
+
+.setup-progress__track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--health-track);
+}
+
+.setup-progress__bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--health-blue);
+  transition: width 180ms ease;
+}
+
+body.is-setup-required .health-shell {
+  pointer-events: none;
+  filter: blur(2px);
+  opacity: 0.35;
+}
+
+@media (max-width: 600px) {
+  .account-button span {
+    display: none;
+  }
+
+  .account-button {
+    width: 32px;
+    min-width: 32px;
+    padding: 0;
+  }
+
+  .setup-card {
+    width: min(460px, calc(100vw - 20px));
+  }
+
+  .setup-header,
+  .setup-body {
+    padding: 14px;
+  }
+}
