@@ -29,14 +29,14 @@ The report can take about a minute to build. Requests run one at a time to stay 
 
 ## Deploy your own copy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/motasim-r/reacher-affiliate-intelligence)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ReacherApp/reacher-affiliate-intelligence)
 
 No environment variables are required. Visitors enter their own Reacher API key in the setup window.
 
 To run it locally:
 
 ```bash
-git clone https://github.com/motasim-r/reacher-affiliate-intelligence.git
+git clone https://github.com/ReacherApp/reacher-affiliate-intelligence.git
 cd reacher-affiliate-intelligence
 npm run dev
 ```
