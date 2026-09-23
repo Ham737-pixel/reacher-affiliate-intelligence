@@ -1,0 +1,12 @@
+{
+  "name": "reacher-affiliate-intelligence",
+  "owner": { "name": "Reacher" },
+  "plugins": [
+    {
+      "name": "reacher-affiliate-intelligence",
+      "source": "./",
+      "description": "Reacher Affiliate Intelligence skill",
+      "strict": false
+    }
+  ]
+}
